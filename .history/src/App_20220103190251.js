@@ -2,28 +2,43 @@ import { useState } from 'react';
 import { ethers } from 'ethers';
 import './App.css';
 import Greeter from './artifacts/contracts/Greeter.sol/Greeter.json';
-//import { Document, Page } from 'react-pdf';
+
 import SinglePagePDFViewer from "/home/jarvis/react-dapp/src/single-page.js";
 import AllPagesPDFViewer from "/home/jarvis/react-dapp/src/all-pages.js";
-import samplePDF from '/home/jarvis/react-dapp/src/inputPDF.pdf';
+import samplePDF from "/home/jarvis/react-dapp/src/inputPDF.pdf";
 import React from 'react';
-import { Viewer } from '@react-pdf-viewer/core';
-import '@react-pdf-viewer/core/lib/styles/index.css';
-import { Worker } from '@react-pdf-viewer/core';
-//import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
-//import path from 'path';
-//import CopyWebpackPlugin from 'copy-webpack-plugin';
-import { Document, Page, pdfjs } from "react-pdf";
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
+import { Page, Text, View, Document, StyleSheet } from '@react-pdf/renderer';
+import ReactPDF from '@react-pdf/renderer';
 
-
-
+ReactPDF.render(<MyDocument />, '${__dirname}/inputPDF.pdf');
 
 //import "./styles.css";
-
+const MyDocument = () => (
+  <Document>
+    <Page size="A4" style={styles.page}>
+      <View style={styles.section}>
+        <Text>Section #1</Text>
+      </View>
+      <View style={styles.section}>
+        <Text>Section #2</Text>
+      </View>
+    </Page>
+  </Document>
+);
 
 
 const greeterAddress = "0x5fbdb2315678afecb367f032d93f642f64180aa3"
+const styles = StyleSheet.create({
+  page: {
+    flexDirection: 'row',
+    backgroundColor: '#E4E4E4'
+  },
+  section: {
+    margin: 10,
+    padding: 10,
+    flexGrow: 1
+  }
+});
 
 
 export function App() {
@@ -71,30 +86,14 @@ export function App() {
   return (
     <div className="App">
     <h4>Single Page</h4>
-    <h3>{samplePDF} </h3>
     <SinglePagePDFViewer pdf={samplePDF} />
 
     <hr />
 
     <h4>All Pages</h4>
     <div className="all-page-container">
-    <Document file={samplePDF}>
-      <Page pageNumber={1} />
-    </Document>
-     // <AllPagesPDFViewer pdf={samplePDF} />
+      <AllPagesPDFViewer pdf={samplePDF} />
     </div>
-    <div
-    style={{
-        border: '1px solid rgba(0, 0, 0, 0.3)',
-        height: '750px',
-    }}
->
-  <Worker workerUrl="https://unpkg.com/pdfjs-dist@2.12.313/build/pdf.worker.min.js">
-
-<Viewer fileUrl="/home/jarvis/react-dapp/src/inputPDF.pdf" />;
-
-</Worker>
-</div>
 
     <hr />
   </div>

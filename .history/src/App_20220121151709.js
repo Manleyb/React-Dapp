@@ -11,7 +11,7 @@ import { Viewer } from '@react-pdf-viewer/core';
 import '@react-pdf-viewer/core/lib/styles/index.css';
 import { Worker } from '@react-pdf-viewer/core';
 //import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
-//import path from 'path';
+import path from 'path';
 //import CopyWebpackPlugin from 'copy-webpack-plugin';
 import { Document, Page, pdfjs } from "react-pdf";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
