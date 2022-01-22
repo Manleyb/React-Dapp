@@ -78,10 +78,10 @@ export function App() {
 
     <h4>All Pages</h4>
     <div className="all-page-container">
-    <Document file={samplePDF}>
+   <Document file={samplePDF}>
+   
       <Page pageNumber={1} />
     </Document>
-     // <AllPagesPDFViewer pdf={samplePDF} />
     </div>
     <div
     style={{
