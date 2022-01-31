@@ -4,7 +4,7 @@ import './App.css';
 import Greeter from './artifacts/contracts/Greeter.sol/Greeter.json';
 //import { Document, Page } from 'react-pdf';
 //import SinglePagePDFViewer from "/home/jarvis/react-dapp/src/single-page.js";
-//import AllPagesPDFViewer from "/home/jarvis/react-dapp/src/all-pages.js";
+import AllPagesPDFViewer from "/home/jarvis/react-dapp/src/all-pages.js";
 import samplePDF from '/home/jarvis/react-dapp/src/inputPDF.pdf';
 import React from 'react';
 import { Viewer } from '@react-pdf-viewer/core';
@@ -72,6 +72,7 @@ export function App() {
     <div className="App">
     <h4>Single Page</h4>
     <h3>{samplePDF} </h3>
+    <SinglePagePDFViewer pdf={samplePDF} />
 
     <hr />
 
