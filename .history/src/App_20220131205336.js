@@ -70,6 +70,7 @@ export function App() {
   }
   return (
     <div className="App">
+    <h4>Single Page</h4>
 
     <hr />
 
@@ -79,7 +80,7 @@ export function App() {
    
       <Page pageNumber={1} />
     </Document>
-    <a href="https://www.westsideseattle.com/west-seattle-herald/2018/07/31/bryce-manley-demonstrates-what-it-takes-be-eagle-scout/">Link to Westside Seattle article 'Bryce Manley demonstrates what it takes to be an Eagle Scout'</a>
+    <a href="https://www.westsideseattle.com/west-seattle-herald/2018/07/31/bryce-manley-demonstrates-what-it-takes-be-eagle-scout/">Visit W3Schools.com!</a>
     </div>
     <div
     style={{

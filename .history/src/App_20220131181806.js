@@ -10,6 +10,7 @@ import React from 'react';
 import { Viewer } from '@react-pdf-viewer/core';
 import '@react-pdf-viewer/core/lib/styles/index.css';
 import { Worker } from '@react-pdf-viewer/core';
+import { Link } from 'react-router';
 //import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
 //import path from 'path';
 //import CopyWebpackPlugin from 'copy-webpack-plugin';
@@ -70,6 +71,7 @@ export function App() {
   }
   return (
     <div className="App">
+    <h4>Single Page</h4>
 
     <hr />
 
@@ -79,7 +81,9 @@ export function App() {
    
       <Page pageNumber={1} />
     </Document>
-    <a href="https://www.westsideseattle.com/west-seattle-herald/2018/07/31/bryce-manley-demonstrates-what-it-takes-be-eagle-scout/">Link to Westside Seattle article 'Bryce Manley demonstrates what it takes to be an Eagle Scout'</a>
+    <ReactRedirect location='https://www.westsideseattle.com/west-seattle-herald/2018/07/31/bryce-manley-demonstrates-what-it-takes-be-eagle-scout'>
+        <this.props.activeRouteHandler />
+      </ReactRedirect>
     </div>
     <div
     style={{
