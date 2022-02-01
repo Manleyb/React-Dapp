@@ -79,9 +79,8 @@ export function App() {
    
       <Page pageNumber={1} />
     </Document>
-    <a href="https://www.westsideseattle.com/west-seattle-herald/2018/07/31/bryce-manley-demonstrates-what-it-takes-be-eagle-scout/">Link to Westside Seattle article 'Bryce Manley demonstrates what it takes to be an Eagle Scout ' </a>
-    <p></p>
-    <a href="https://ipfs.fleek.co/ipfs/QmWvVV8Mr38vXgatGsGdabQYJX592g49f3WHtPHnJqb2DW/">Link to IPFS version of site - must be running an IPFS node, or have the IPFS extension installed'</a>
+    <a href="https://www.westsideseattle.com/west-seattle-herald/2018/07/31/bryce-manley-demonstrates-what-it-takes-be-eagle-scout/">Link to Westside Seattle article 'Bryce Manley demonstrates what it takes to be an Eagle Scout ' \n </a>
+    <a href="https://ipfs.fleek.co/ipfs/QmWvVV8Mr38vXgatGsGdabQYJX592g49f3WHtPHnJqb2DW/">Link to IPFS version of site must be running an IPFS node or have the IPFS extension installed'</a>
 
     
     </div>
